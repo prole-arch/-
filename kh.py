@@ -4,3 +4,5 @@ if data%2==0:
     print("четное")
 else:
     print("не четное")
+def somefeature():
+    pass

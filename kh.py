@@ -6,5 +6,7 @@ else:
     print("не четное")
 def myfeature():
     pass
-def somefeature():
-    pass
+def somefeature(data):
+    f=data+1
+    return f
+print(somefeature(data))

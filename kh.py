@@ -6,3 +6,5 @@ else:
     print("не четное")
 def myfeature():
     pass
+def somefeature():
+    pass

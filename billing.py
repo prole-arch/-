@@ -9,9 +9,21 @@ class Money:
             print("Erorr")
 
     def __str__(self):
+        return f"{self.amount},{self.currency}"
+    def __repr__(self):
         return f"Money {self.amount},{self.currency}"
+    def __add__(self, other):
+        if other.currency == self.currency:
+            return Money(other.amount + self.amount, self.currency)
+        if  other.currency != self.currency:
+            raise NotImplemented("типы валют не совпадают")
+    def __sub__(self, other):
+        if other.currency == self.currency:
+            return Money(self.amount - other.amount , self.currency)
+        if other.currency != self.currency:
+            raise NotImplemented("типы валют не совпадают")
+m1=Money(101,"RUB")
+m2 = Money(15,"usd")
 
-
-
-m1=Money(101,"usd")
-print(str(m1))
+m3 = m1 - m2
+print(m3)
